@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 136:
+/***/ 151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(71);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -88,7 +88,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Connexion</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n<div class="splash-logo"></div>\n\n  <form [formGroup]="signInForm" (ngSubmit)="signInFormSubmit()">\n\n    <ion-item>\n      <ion-label>Email</ion-label>\n      <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Mot de passe</ion-label>\n      <ion-input type="password" formControlName="password" clearInput></ion-input>\n    </ion-item>\n\n    <button ion-button type="submit" [disabled]="!signInForm.valid" block>Connexion</button>\n\n\n  </form>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Connexion</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n<div class="splash-logo"></div>\n\n\n\n  <form [formGroup]="signInForm" (ngSubmit)="signInFormSubmit()">\n\n\n\n    <ion-item>\n\n      <ion-label>Email</ion-label>\n\n      <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>Mot de passe</ion-label>\n\n      <ion-input type="password" formControlName="password" clearInput></ion-input>\n\n    </ion-item>\n\n\n\n    <button ion-button type="submit" [disabled]="!signInForm.valid" block>Connexion</button>\n\n\n\n\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
@@ -101,16 +101,16 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 137:
+/***/ 152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(481);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -197,29 +197,30 @@ var SignupPage = (function () {
     };
     SignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\signup\signup.html"*/'<!--\n  Generated template for the SignupPage page.\n\n  See http//ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Inscription</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <form [formGroup]="emailSignUpForm" (ngSubmit)="emailSignUpFormSubmit()">\n    <ion-item>\n      <ion-label>Nom</ion-label>\n      <ion-input type="text" formControlName="nom" name="nom" required clearInput></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Prénom</ion-label>\n      <ion-input type="text" formControlName="prenom" name="prenom" required clearInput></ion-input>\n    </ion-item>\n\n     <ion-item>\n       <ion-label>Adresse mail</ion-label>\n       <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>\n     </ion-item>\n\n     <ion-item>\n       <ion-label>Mot de passe</ion-label>\n       <ion-input type="password" formControlName="password" clearInput></ion-input>\n     </ion-item>\n\n     <button ion-button item-right type="submit" [disabled]="!emailSignUpForm.valid" block>Valider</button>\n\n\n   </form>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\signup\signup.html"*/,
+            selector: 'page-signup',template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\signup\signup.html"*/'<!--\n\n  Generated template for the SignupPage page.\n\n\n\n  See http//ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Inscription</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <form [formGroup]="emailSignUpForm" (ngSubmit)="emailSignUpFormSubmit()">\n\n    <ion-item>\n\n      <ion-label>Nom</ion-label>\n\n      <ion-input type="text" formControlName="nom" name="nom" required clearInput></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>Prénom</ion-label>\n\n      <ion-input type="text" formControlName="prenom" name="prenom" required clearInput></ion-input>\n\n    </ion-item>\n\n\n\n     <ion-item>\n\n       <ion-label>Adresse mail</ion-label>\n\n       <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>\n\n     </ion-item>\n\n\n\n     <ion-item>\n\n       <ion-label>Mot de passe</ion-label>\n\n       <ion-input type="password" formControlName="password" clearInput></ion-input>\n\n     </ion-item>\n\n\n\n     <button ion-button item-right type="submit" [disabled]="!emailSignUpForm.valid" block>Valider</button>\n\n\n\n\n\n   </form>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\signup\signup.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ViewController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3__providers_auth_auth__["a" /* AuthProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ViewController */]])
     ], SignupPage);
     return SignupPage;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=signup.js.map
 
 /***/ }),
 
-/***/ 138:
+/***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_auth__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -320,7 +321,7 @@ var WelcomePage = (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\welcome\welcome.html"*/'<ion-content scroll="false">\n  <div class="splash-bg"></div>\n  <div class="splash-info">\n    <div class="splash-logo"></div>\n    <div class="splash-intro"></div>\n  </div>\n\n  <div padding text-center>\n    <button ion-button full color="primary" (click)="login()" >Connexion</button>\n    <button ion-button full color="dark" (click)="signup()" >Inscription</button>\n  </div>\n\n  <button ion-button round color="primary" clear (click)="forgotPass()" block>Mot de passe oublié ?</button>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\welcome\welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\welcome\welcome.html"*/'<ion-content scroll="false">\n\n  <div class="splash-bg"></div>\n\n  <div class="splash-info">\n\n    <div class="splash-logo"></div>\n\n    <div class="splash-intro"></div>\n\n  </div>\n\n\n\n  <div padding text-center>\n\n    <button ion-button full color="primary" (click)="login()" >Connexion</button>\n\n    <button ion-button full color="dark" (click)="signup()" >Inscription</button>\n\n  </div>\n\n\n\n  <button ion-button round color="primary" clear (click)="forgotPass()" block>Mot de passe oublié ?</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\welcome\welcome.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -333,7 +334,7 @@ var WelcomePage = (function () {
 
 /***/ }),
 
-/***/ 150:
+/***/ 165:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -346,24 +347,24 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 150;
+webpackEmptyAsyncContext.id = 165;
 
 /***/ }),
 
-/***/ 193:
+/***/ 208:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/login/login.module": [
-		456,
+		503,
 		2
 	],
 	"../pages/signup/signup.module": [
-		457,
+		504,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		458,
+		505,
 		0
 	]
 };
@@ -378,20 +379,22 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 193;
+webpackAsyncContext.id = 208;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 287:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_firebase__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -405,24 +408,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomePage = (function () {
     function HomePage(navCtrl, afAuth, toastCtrl) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.afAuth = afAuth;
         this.toastCtrl = toastCtrl;
+        this._userNom = {};
         this.userData = {
-            displayName: 'Stranger',
+            displayName: 'Stranger'
         };
+        this.userDatas = {};
+        this.userPrenom = {};
+        this.userID = {};
         this.greeting = "Hello";
-        //const userID = this.authService.getAc
         afAuth.authState.subscribe(function (user) {
             if (user) {
                 _this.userData = user;
+                _this.userID = __WEBPACK_IMPORTED_MODULE_4_firebase__["auth"]().currentUser.uid;
+                _this.userDatas = __WEBPACK_IMPORTED_MODULE_4_firebase__["database"]().ref('Account/' + _this.userID)
+                    .once('value')
+                    .then(function (snapshot) {
+                    //this.userNom = (snapshot.val() && snapshot.val().prenom);
+                });
             }
         });
         this.setGreeting();
     }
+    Object.defineProperty(HomePage.prototype, "userNom", {
+        get: function () {
+            return this._userNom;
+        },
+        set: function (value) {
+            this._userNom = value;
+        },
+        enumerable: true,
+        configurable: true
+    });
     HomePage.prototype.createToast = function (message) {
         return this.toastCtrl.create({
             message: message,
@@ -456,7 +479,7 @@ var HomePage = (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Accueil</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content></ion-refresher-content>\n  </ion-refresher>\n\n  <div padding [@myAnimation]>\n    <div text-center>\n      <p id="homePage">{{ greeting }}, {{ userData.displayName}}.</p>\n\n      <p>This is just a basic app. Why don\'t you add something?</p>\n    </div>\n\n    <button ion-button color="dark" block (click)="signOutClicked()">Sign Out</button>\n\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\home\home.html"*/,
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Accueil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n\n\n<ion-content>\n\n\n\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n\n    <ion-refresher-content></ion-refresher-content>\n\n  </ion-refresher>\n\n\n\n  <div padding [@myAnimation]>\n\n    <div text-center>\n\n      <p id="homePage">{{ greeting }}, {{ userData.displayName }}, id: {{ userID}}.</p>\n\n\n\n      <p>This is just a basic app. Why don\'t you add something?</p>\n\n    </div>\n\n\n\n    <button ion-button color="dark" block (click)="signOutClicked()">Sign Out</button>\n\n\n\n    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\home\home.html"*/,
             animations: [
                 Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* trigger */])('myAnimation', [
                     Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* transition */])(':enter', [
@@ -482,13 +505,13 @@ var HomePage = (function () {
 
 /***/ }),
 
-/***/ 288:
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -871,7 +894,7 @@ var ListPage = (function () {
     };
     ListPage = ListPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\list\list.html"*/'<ion-content>\n\n\n\n  <div (swipe)="back($event)">\n\n    <ion-item>\n\n      <button ion-button clear (click)="back($event)">\n\n        <ion-icon name="arrow-back" item-start></ion-icon>\n\n        Available Icons\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-list no-lines>\n\n      <ion-item *ngFor="let icon of icons">\n\n        <ion-icon [name]="icon.name" item-start></ion-icon>\n\n          {{icon.name}}\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\pages\list\list.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\list\list.html"*/'<ion-content>\n\n\n\n  <div (swipe)="back($event)">\n\n    <ion-item>\n\n      <button ion-button clear (click)="back($event)">\n\n        <ion-icon name="arrow-back" item-start></ion-icon>\n\n        Available Icons\n\n      </button>\n\n    </ion-item>\n\n\n\n    <ion-list no-lines>\n\n      <ion-item *ngFor="let icon of icons">\n\n        <ion-icon [name]="icon.name" item-start></ion-icon>\n\n          {{icon.name}}\n\n      </ion-item>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\pages\list\list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ListPage);
@@ -883,13 +906,13 @@ var ListPage = (function () {
 
 /***/ }),
 
-/***/ 289:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(333);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -897,29 +920,29 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 310:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export firebaseConfig */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_auth_auth__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_list_list__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_welcome_welcome__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_login_login__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser_animations__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_textarea_autoresize_textarea_autoresize__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(474);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_auth_auth__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(499);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_list_list__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_welcome_welcome__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_login_login__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_signup_signup__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__angular_platform_browser_animations__ = __webpack_require__(500);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_textarea_autoresize_textarea_autoresize__ = __webpack_require__(502);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1009,19 +1032,19 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 452:
+/***/ 499:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(247);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(250);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_welcome_welcome__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1105,7 +1128,7 @@ var MyApp = (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\app\app.html"*/'<ion-menu [content]="content" class="menu-o">\n\n  <ion-header>\n\n    <ion-toolbar color="menu-o-t">\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-item no-lines *ngIf="userData.loggedIn">\n\n        <ion-avatar item-right>\n\n          <img src="{{ userData.photoURL }}">\n\n        </ion-avatar>\n\n        <h2>Welcome {{ userData.displayName }}</h2>\n\n      </ion-item>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[0])">\n\n            <div>\n\n              <ion-icon name="analytics"></ion-icon>\n\n              <label>Analytics</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" class="img-bg firebase" (click)="openPage(pages[1])">\n\n            <ion-icon name="bonfire"></ion-icon>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <div>\n\n              <ion-icon name="images"></ion-icon>\n\n              <label>Images</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <div>\n\n              <ion-icon name="finger-print"></ion-icon>\n\n              <label>Touch ID</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button block color="menu-o">\n\n            <div>\n\n              <ion-icon name="flash"></ion-icon>\n\n              <label>Flash</label>\n\n            </div>\n\n\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col width-50>\n\n          <button ion-button block color="menu-o" class="img-bg wifi">\n\n          <ion-icon name="wifi"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-25>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <ion-icon name="logo-xbox"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-25>\n\n          <button ion-button block color="menu-o">\n\n          <ion-icon name="ionic"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button block color="menu-o">\n\n          <ion-icon name="water"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-67>\n\n          <button ion-button block color="menu-o" class="img-bg medal">\n\n          <ion-icon name="medal"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <ion-list>\n\n      <button menuClose ion-button block color="menu-o" (click)="signOutClicked()">\n\n        <ion-icon name="person"></ion-icon> Logout\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Bastien\kcrea\ionic3-firebase-starter\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\Bastien\WebstormProjects\Kcrea\src\app\app.html"*/'<ion-menu [content]="content" class="menu-o">\n\n  <ion-header>\n\n    <ion-toolbar color="menu-o-t">\n\n      <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n      <ion-item no-lines *ngIf="userData.loggedIn">\n\n        <ion-avatar item-right>\n\n          <img src="{{ userData.photoURL }}">\n\n        </ion-avatar>\n\n        <h2>Welcome {{ userData.displayName }}</h2>\n\n      </ion-item>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n  <ion-content>\n\n    <ion-grid>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[0])">\n\n            <div>\n\n              <ion-icon name="analytics"></ion-icon>\n\n              <label>Analytics</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" class="img-bg firebase" (click)="openPage(pages[1])">\n\n            <ion-icon name="bonfire"></ion-icon>\n\n          </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <div>\n\n              <ion-icon name="images"></ion-icon>\n\n              <label>Images</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <div>\n\n              <ion-icon name="finger-print"></ion-icon>\n\n              <label>Touch ID</label>\n\n            </div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button block color="menu-o">\n\n            <div>\n\n              <ion-icon name="flash"></ion-icon>\n\n              <label>Flash</label>\n\n            </div>\n\n\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col width-50>\n\n          <button ion-button block color="menu-o" class="img-bg wifi">\n\n          <ion-icon name="wifi"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-25>\n\n          <button menuClose ion-button block color="menu-o" (click)="openPage(pages[1])">\n\n            <ion-icon name="logo-xbox"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-25>\n\n          <button ion-button block color="menu-o">\n\n          <ion-icon name="ionic"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button block color="menu-o">\n\n          <ion-icon name="water"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n        <ion-col width-67>\n\n          <button ion-button block color="menu-o" class="img-bg medal">\n\n          <ion-icon name="medal"></ion-icon>\n\n        </button>\n\n        </ion-col>\n\n      </ion-row>\n\n    </ion-grid>\n\n    <ion-list>\n\n      <button menuClose ion-button block color="menu-o" (click)="signOutClicked()">\n\n        <ion-icon name="person"></ion-icon> Logout\n\n      </button>\n\n    </ion-list>\n\n  </ion-content>\n\n\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Bastien\WebstormProjects\Kcrea\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_7_angularfire2_auth__["a" /* AngularFireAuth */]])
@@ -1117,7 +1140,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 455:
+/***/ 502:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1189,14 +1212,14 @@ var TextareaAutoresizeDirective = (function () {
 
 /***/ }),
 
-/***/ 65:
+/***/ 71:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase_app__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_auth__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase_app__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_firebase_app___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_firebase_app__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1240,5 +1263,5 @@ var AuthProvider = (function () {
 
 /***/ })
 
-},[289]);
+},[312]);
 //# sourceMappingURL=main.js.map
