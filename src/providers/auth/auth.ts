@@ -26,5 +26,9 @@ export class AuthProvider {
   signOutUser(): Promise<void> {
     return this.afAuth.auth.signOut();
   }
-
+/*
+  createUser(nom: string, prenom: string): Promise<void> {
+    return this
+  }
+*/
 }

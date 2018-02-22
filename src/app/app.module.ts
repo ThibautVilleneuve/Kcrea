@@ -15,6 +15,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ProfilPage } from '../pages/profil/profil';
 
 // User Auth Pages
 import { WelcomePage } from '../pages/welcome/welcome';
@@ -44,6 +45,7 @@ export const firebaseConfig = {
     WelcomePage,
     LoginPage,
     SignupPage,
+    ProfilPage,
     TextareaAutoresizeDirective
   ],
   imports: [
@@ -61,7 +63,8 @@ export const firebaseConfig = {
     ListPage,
     WelcomePage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    ProfilPage
   ],
   providers: [
     StatusBar,

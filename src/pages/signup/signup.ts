@@ -5,6 +5,9 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ToastController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+
+import { ProfilPage } from '../profil/profil';
+
 import * as firebase from 'firebase';
 
 /**
@@ -29,8 +32,6 @@ export class SignupPage {
 
     // building the form
     this.emailSignUpForm = formBuilder.group({
-      nom: ['',Validators.compose([Validators.required])],
-      prenom: ['',Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
     });
@@ -55,14 +56,14 @@ export class SignupPage {
       this.auth.signUpUser(this.emailSignUpForm.value.email, this.emailSignUpForm.value.password)
         .then(() => {
           //On ajoute les données utilisateurs
-          let createThisAccount = firebase.database().ref('Account').push();
+          /*let createThisAccount = firebase.database().ref('Account').push();
           createThisAccount.set
           ({
             nom: this.emailSignUpForm.value.nom,
             prenom: this.emailSignUpForm.value.prenom,
             email: this.emailSignUpForm.value.email,
             key : createThisAccount.key
-          })
+          })*/
           // showing succesfull message
           this.createToast('Enregistrement effectué avec l\'adresse: ' + this.emailSignUpForm.value.email).present();
           // closing dialog

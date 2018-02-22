@@ -16,16 +16,6 @@
 <ion-content padding>
 
   <form [formGroup]="emailSignUpForm" (ngSubmit)="emailSignUpFormSubmit()">
-    <ion-item>
-      <ion-label>Nom</ion-label>
-      <ion-input type="text" formControlName="nom" name="nom" required clearInput></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Prénom</ion-label>
-      <ion-input type="text" formControlName="prenom" name="prenom" required clearInput></ion-input>
-    </ion-item>
-
      <ion-item>
        <ion-label>Adresse mail</ion-label>
        <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>

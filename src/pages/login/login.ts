@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams, ToastController, ViewController } 
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { AuthProvider } from '../../providers/auth/auth';
 
+import * as firebase from 'firebase';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -49,6 +51,14 @@ export class LoginPage {
        // if the form is valid, we continue with validation
        this.auth.signInUser(this.signInForm.value.email, this.signInForm.value.password)
          .then(() => {
+           //On vérifie l'existence des données
+            this.auth.afAuth.authState.subscribe(user=>{
+              var infosUser = firebase.database().ref(`profil/${user.uid}`);
+              if(infosUser == null)
+              {
+                this.navCtrl.setRoot(LoginPage);
+              }
+            })
            // showing succesfull message
            this.createToast('Signed in with email: ' + this.signInForm.value.email).present();
            // closing dialog

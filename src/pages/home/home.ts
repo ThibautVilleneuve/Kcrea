@@ -7,6 +7,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 import { AngularFireAuth } from 'angularfire2/auth';
 
 import * as firebase from 'firebase';
+import {getInstance} from "@ionic/app-scripts/dist/util/hybrid-file-system-factory";
 
 @Component({
   selector: 'page-home',
@@ -31,7 +32,7 @@ import * as firebase from 'firebase';
   ]
 })
 export class HomePage {
-
+/*
     private _userNom = {}
 
     get userNom(): {} {
@@ -41,7 +42,7 @@ export class HomePage {
     set userNom(value: {}) {
         this._userNom = value;
     }
-
+*/
   userData = {
     displayName: 'Stranger'
   };
@@ -63,12 +64,15 @@ export class HomePage {
     afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
-        this.userID = firebase.auth().currentUser.uid;
-        this.userDatas = firebase.database().ref('Account/'+ this.userID)
-            .once('value')
-            .then(function(snapshot){
-                //this.userNom = (snapshot.val() && snapshot.val().prenom);
-            })
+        var usertest = firebase.auth().currentUser.uid;
+        this.userID = firebase.auth().currentUser.getIdToken();
+        var usertestdata = user.uid;
+        const userRef = firebase.database().ref('/Account/'+ usertest);
+        userRef.on('value', snapshot =>{
+            this.userDatas = snapshot.val();
+        });
+        console.log(this.userDatas);
+        console.log("ID: " + usertestdata);
       }
     });
 

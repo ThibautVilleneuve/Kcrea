@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProfilPage } from '../pages/profil/profil';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,15 +37,7 @@ export class MyApp {
         this.rootPage = WelcomePage;
 
       } else {
-        // page for auth. users
-        this.rootPage = HomePage;
-        this.userData = {
-          loggedIn: true,
-          uid: user.uid,
-          displayName: user.displayName,
-          photoURL: user.photoURL || 'assets/imgs/default-user-image.png'
-        };
-
+        this.rootPage = ProfilPage;
       }
     });
 
