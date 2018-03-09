@@ -1,29 +1,30 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Accueil</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>
+			Ionic3 Server Send Test
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
+<ion-content padding>
+	<ion-list>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input type="text" name="username" [(ngModel)]="data.username"></ion-input>
+		</ion-item>
 
+		<button ion-button block (click)="submit()">Submit to server</button>
+		<button ion-button block (click)="login()">Connexion</button>
+		<button ion-button block (click)="registration()">Inscription</button>
+	</ion-list>
 
-<ion-content>
+	<ion-card>
+		<ion-card-header>
+			Response
+		</ion-card-header>
 
-  <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
-
-  <div padding [@myAnimation]>
-    <div text-center>
-      <p id="homePage">{{ greeting }}, {{ userData.displayName}}.</p>
-
-      <p>This is just a basic app. Why don't you add something?</p>
-    </div>
-
-    <button ion-button color="dark" block (click)="signOutClicked()">Sign Out</button>
-
-    <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
-  </div>
+		<ion-card-content>
+			<b>{{data.response}}</b>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

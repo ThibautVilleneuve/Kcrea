@@ -1,83 +1,72 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Http } from '@angular/http';
+import { User } from '../../app/user';
+import { empty } from 'rxjs/Observer';
 
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { AuthProvider } from '../../providers/auth/auth';
+import { IUser } from '../../app/interface/IUser';
 
 /**
  * Generated class for the LoginPage page.
  *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
  */
-
 @IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
+
+
 export class LoginPage {
 
-  public signInForm: FormGroup;
+  private login : FormGroup;
+  private result;
+  private jsonResult;
+  data:any = {};
+  dataTest:JSON;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    private formBuilder: FormBuilder,  public auth: AuthProvider,
-    public toastCtrl: ToastController, public viewCtrl: ViewController) {
 
-     // building the form
-     this.signInForm = formBuilder.group({
-       email: ['', Validators.compose([Validators.required, Validators.email])],
-       password: ['', Validators.compose([Validators.minLength(6), Validators.required])]
-     });
+  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder : FormBuilder, public http:Http, private toastCtrl: ToastController) {
+    this.login = this.formBuilder.group({
+      email : ['', Validators.required],
+      pass: ['', Validators.required]
+    });
   }
 
-  createToast(message: string) {
-    return this.toastCtrl.create({
-      message,
-      duration: 3000
-    })
+  onSubmitLoginForm(){
+    var link = 'http://79.94.83.246/apitest/login.php';
+        var myData = JSON.stringify({login: this.login.value});
+        
+        this.http.post(link, myData)
+        .subscribe(data => {
+          this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
+          this.jsonResult = JSON.parse(this.data['response']);
+          if (this.jsonResult != false)
+          {
+            
+            var user = new user(this.jsonResult.id_acc,this.jsonResult.lastName_acc,this.jsonResult.firstName_acc,this.jsonResult.mail_acc,this.jsonResult.registrationDate_acc);
+            console.log(JSON.parse(this.data['response']));
+            console.log(user);
+            console.log('Bienvenue ' + user.getPrenom() + ' ' + user.getNom());
+            localStorage.setItem('userData', JSON.stringify(user));
+          }
+          else
+          {
+            console.log('Nom de compte ou mot de passe eronné');
+          }
+        }, error => {
+            console.log("Oooops!");
+        });
+
+    //console.log(this.user.value);
   }
-
-  signInFormSubmit() {
-
-     // first we check, if the form is valid
-     if (!this.signInForm.valid) {
-       this.createToast('Ooops, form not valid...').present();
-       return
-     } else {
-
-       // if the form is valid, we continue with validation
-       this.auth.signInUser(this.signInForm.value.email, this.signInForm.value.password)
-         .then(() => {
-           // showing succesfull message
-           this.createToast('Signed in with email: ' + this.signInForm.value.email).present();
-           // closing dialog
-           //this.viewCtrl.dismiss();
-         },
-
-         /**
-          * Handle Authentication errors
-          * Here you can customise error messages like our example.
-          * https://firebase.google.com/docs/reference/js/firebase.auth.Error
-          *
-          * mismatch with error interface: https://github.com/angular/angularfire2/issues/976
-          */
-         (error: any) => {
-           switch (error.code) {
-             case 'auth/invalid-api-key':
-               this.createToast('Invalid API key.').present();
-               break;
-             default:
-               this.createToast(error.message).present();
-               break;
-           }
-         })
-     }
-   }
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    console.log();
   }
 
 }

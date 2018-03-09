@@ -13,23 +13,39 @@
 </ion-header>
 
 
-<ion-content>
-<div class="splash-logo"></div>
+<ion-content padding>
 
-  <form [formGroup]="signInForm" (ngSubmit)="signInFormSubmit()">
-
+  <form [formGroup]="login">
+    
     <ion-item>
-      <ion-label>Email</ion-label>
-      <ion-input type="email" formControlName="email" name="email" required clearInput></ion-input>
+      <ion-label floating>Adresse mail</ion-label>
+      <ion-input formControlName ="email"
+          type="mail" name="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Mot de passe</ion-label>
-      <ion-input type="password" formControlName="password" clearInput></ion-input>
+      <ion-label floating>Mot de passe</ion-label>
+      <ion-input formControlName ="pass"
+          type="password" name="pass"></ion-input>
     </ion-item>
 
-    <button ion-button type="submit" [disabled]="!signInForm.valid" block>Connexion</button>
-
+    <ion-row>
+      <ion-col text-center>
+        <button ion-button block (click)="onSubmitLoginForm()">
+          Connexion
+        </button>
+      </ion-col>
+    </ion-row>
 
   </form>
+  
+	<ion-card>
+		<ion-card-header>
+			Response
+		</ion-card-header>
+
+		<ion-card-content>
+			<b>{{data.response}}</b>
+		</ion-card-content>
+	</ion-card>
 </ion-content>

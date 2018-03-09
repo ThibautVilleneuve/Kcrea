@@ -1,96 +1,59 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
+import { NavController, LoadingController } from 'ionic-angular';
+import { Http } from '@angular/http'; //https://stackoverflow.com/questions/43609853/angular-4-and-ionic-3-no-provider-for-http
+import { RegistrationPage } from '../registration/registration';
+import { LoginPage } from '../login/login';
+import { AccueilPage } from '../accueil/accueil';
 
-import { trigger, transition, style, animate, state } from '@angular/animations';
-
-import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
-  animations: [
-    trigger(
-      'myAnimation',
-      [
-        transition(
-        ':enter', [
-          style({transform: 'translateY(30%)', opacity: 0}),
-          animate('800ms', style({transform: 'translateY(0)', 'opacity': 1}))]
-        // )
-        ),
-        transition(
-        ':leave', [
-          style({transform: 'translateX(0)', 'opacity': 1}),
-          animate('500ms', style({transform: 'translateX(100%)', 'opacity': 0}))]
-        )
-      ]
-    )
-  ]
+ 	selector: 'page-home',
+  	templateUrl: 'home.html'
 })
+
 export class HomePage {
+    data:any = {};
+    loader:any = {};
+    constructor(public navCtrl: NavController, public http: Http, public loadingCtrl : LoadingController) {
+        this.data.username = '';
+        this.data.response = '';
+        this.http = http;
+        //this.loader = this.loadingCtrl.create({content: "Veuillez patienter..."});
+        //this.loader.present();
+     }
 
-  userData = {
-    displayName: 'Stranger',
-    //displayPrenom:''
-  };
+        
+	 submit() {
+        var link = 'http://192.168.1.85/apitest/api.php';
+        var myData = JSON.stringify({username: this.data.username});
+        //test
+        
+        this.http.post(link, myData)
+        .subscribe(data => {
+            this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response   console.log(data);
+        }, error => {
+            console.log("Oooops!");
+        });
+  }
 
+    login(){
+        this.navCtrl.push(LoginPage);
+    }
 
-  greeting = "Hello";
+    registration(){
+        this.navCtrl.push(RegistrationPage);
+    }
 
-
-  constructor(public navCtrl: NavController, public afAuth: AngularFireAuth,
-    public toastCtrl: ToastController) {
-    //const userID = this.authService.getAc
-    afAuth.authState.subscribe(user => {
-      if (user) {
-        this.userData = user;
+    ionViewDidLoad() {
+        
+        if(localStorage.getItem('userData') != null)
+        {
+            this.navCtrl.setRoot(AccueilPage);
+        }
       }
-    });
+}
 
-    this.setGreeting();
-  }
-
-  createToast(message: string) {
-    return this.toastCtrl.create({
-      message,
-      duration: 3000
-    })
-  }
-
-  doRefresh(refresher) {
-
-
-
-    setTimeout(() => {
-      refresher.complete();
-    }, 2000);
-  }
-
-  setGreeting() {
-    let timeNow = new Date().getHours();
-
-    if (timeNow < 12) {
-      this.greeting = "Good morning";
-    } else if (timeNow < 18) {
-      this.greeting = "Good afternoon";
-    } else {
-      this.greeting = "Good evening";
-    }
-  }
-
-
-  signOutClicked() {
-    this.afAuth.auth.signOut();
-  }
-
-
-  swipeEvent(event: any) {
-    if (event.deltaX < 0){
-      //
-    }
-
-  }
-
-
+window.onload = () => {
+    //HomePage.loader
+    console.log("Page chargée.")
 }
