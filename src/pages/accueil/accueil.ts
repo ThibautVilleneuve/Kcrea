@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../app/user';
+import { IUser } from '../../app/interface/IUser';
 
 /**
  * Generated class for the AccueilPage page.
@@ -20,12 +21,9 @@ export class AccueilPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,) {
 
-    var tempUser = JSON.parse(localStorage.getItem('userData'));
-    
-    Object.assign(this.varTest, tempUser);
-    console.log(tempUser);
-    console.log(this.user);
-    console.log(this.varTest);
+    let utilisateur: User = Object.assign(new User(), JSON.parse(localStorage.getItem('userData')));
+    console.log(utilisateur);
+    console.log(utilisateur.getPrenom())
   }
 
   ionViewDidLoad() {

@@ -5,6 +5,8 @@ import { Http } from '@angular/http';
 import { User } from '../../app/user';
 import { empty } from 'rxjs/Observer';
 
+import { IUser } from '../../app/interface/IUser';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -44,7 +46,8 @@ export class LoginPage {
           this.jsonResult = JSON.parse(this.data['response']);
           if (this.jsonResult != false)
           {
-            var user = new User(this.jsonResult.id_acc,this.jsonResult.lastName_acc,this.jsonResult.firstName_acc,this.jsonResult.mail_acc,this.jsonResult.registrationDate_acc);
+            
+            var user = new user(this.jsonResult.id_acc,this.jsonResult.lastName_acc,this.jsonResult.firstName_acc,this.jsonResult.mail_acc,this.jsonResult.registrationDate_acc);
             console.log(JSON.parse(this.data['response']));
             console.log(user);
             console.log('Bienvenue ' + user.getPrenom() + ' ' + user.getNom());

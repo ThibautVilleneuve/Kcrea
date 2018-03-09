@@ -6,14 +6,6 @@ export class User{
     private acc_mail:string;
     private acc_registrationDate:Date;
     private acc_token: string;
-   //constructor 
-   constructor(acc_id:number, acc_nom:string, acc_prenom:string, acc_mail:string, acc_registrationDate:Date) { 
-      this.acc_id =  acc_id,
-      this.acc_nom = acc_nom,
-      this.acc_prenom = acc_prenom,
-      this.acc_mail = acc_mail,
-      this.acc_registrationDate = acc_registrationDate;
-   }  
 
    getID()
     {
@@ -30,7 +22,7 @@ export class User{
        return this.acc_nom;
     }
 
-   getPrenom()
+   getPrenom() : string
     {
        return this.acc_prenom;
     }
