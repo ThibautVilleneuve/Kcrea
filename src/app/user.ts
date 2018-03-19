@@ -4,8 +4,8 @@ export class User{
     private acc_nom:string;
     private acc_prenom:string;
     private acc_mail:string;
-    private acc_registrationDate:Date;
-    private acc_token: string;
+    //private acc_registrationDate:Date;
+    //private acc_token: string;
 
    getID()
     {
@@ -27,10 +27,10 @@ export class User{
        return this.acc_prenom;
     }
 
-    getRegistrationDate()
+    /*getRegistrationDate()
     {
         return this.acc_registrationDate;
-    }
+    }*/
 
     /*setMail()
     {

@@ -30,7 +30,7 @@ export class RegistrationPage {
   }
 
   onSubmitRegistrationForm(){
-    var link = 'http://192.168.1.85/apitest/newacc.php';
+    var link = 'http://79.94.83.246/apitest/newacc.php';
         var myData = JSON.stringify({user: this.user.value});
         
         this.http.post(link, myData)
