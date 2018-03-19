@@ -20,10 +20,10 @@ export class AccueilPage {
   private varTest: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,) {
-
-    let utilisateur: User = Object.assign(new User(), JSON.parse(localStorage.getItem('userData')));
+    let utilisateur = Object.create(User.prototype);
+    Object.assign(utilisateur, JSON.parse(localStorage.getItem('userData')));
     console.log(utilisateur);
-    console.log(utilisateur.getPrenom())
+    console.log(utilisateur.getID())
   }
 
   ionViewDidLoad() {

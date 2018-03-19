@@ -24,7 +24,7 @@ export class HomePage {
 
         
 	 submit() {
-        var link = 'http://192.168.1.85/apitest/api.php';
+        var link = 'http://79.94.83.246/apitest/api.php';
         var myData = JSON.stringify({username: this.data.username});
         //test
         

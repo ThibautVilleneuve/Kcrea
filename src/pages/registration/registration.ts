@@ -30,12 +30,12 @@ export class RegistrationPage {
   }
 
   onSubmitRegistrationForm(){
-    var link = 'http://192.168.1.85/apitest/newacc.php';
+    var link = 'http://79.94.83.246/apitest/newacc.php';
         var myData = JSON.stringify({user: this.user.value});
         
         this.http.post(link, myData)
         .subscribe(data => {
-        	//this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
+        	this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
           const toast = this.toastCtrl.create({message: 'Félicitation ' + this.user.controls['prenom'].value + " " +  this.user.controls['nom'].value + " votre compte a bien été créé.", duration: 3000, position: 'bottom'});
           toast.present();
         }, error => {
