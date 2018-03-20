@@ -1,11 +1,11 @@
 export class User{
-    //field 
-    private acc_id:number; 
+    //field
+    private acc_id:number;
     private acc_nom:string;
     private acc_prenom:string;
     private acc_mail:string;
-    //private acc_registrationDate:Date;
-    //private acc_token: string;
+    private acc_registrationDate:Date;
+    private acc_token: string;
 
    getID()
     {
@@ -27,18 +27,18 @@ export class User{
        return this.acc_prenom;
     }
 
-    /*getRegistrationDate()
+    getRegistrationDate()
     {
         return this.acc_registrationDate;
-    }*/
+    }
 
     /*setMail()
     {
         this.acc_mail = ;
     }*/
-  
-   //function 
-   /*disp():void { 
-      console.log("Engine is  :   "+this.engine) 
+
+   //function
+   /*disp():void {
+      console.log("Engine is  :   "+this.engine)
    } */
   }

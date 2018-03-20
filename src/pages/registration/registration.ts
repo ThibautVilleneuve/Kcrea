@@ -35,7 +35,7 @@ export class RegistrationPage {
         
         this.http.post(link, myData)
         .subscribe(data => {
-        	//this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
+        	this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
           const toast = this.toastCtrl.create({message: 'Félicitation ' + this.user.controls['prenom'].value + " " +  this.user.controls['nom'].value + " votre compte a bien été créé.", duration: 3000, position: 'bottom'});
           toast.present();
         }, error => {
