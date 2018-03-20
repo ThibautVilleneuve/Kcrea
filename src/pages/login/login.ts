@@ -43,15 +43,16 @@ export class LoginPage {
         this.http.post(link, myData)
         .subscribe(data => {
           this.data.response = data["_body"]; //https://stackoverflow.com/questions/39574305/property-body-does-not-exist-on-type-response
-          this.jsonResult = JSON.parse(this.data['response']);
+          //this.jsonResult = JSON.parse(this.data['response']);
           if (this.jsonResult != false)
           {
 
-            var user = new user(this.jsonResult.id_acc,this.jsonResult.lastName_acc,this.jsonResult.firstName_acc,this.jsonResult.mail_acc,this.jsonResult.registrationDate_acc);
-            console.log(JSON.parse(this.data['response']));
-            console.log(user);
-            console.log('Bienvenue ' + user.getPrenom() + ' ' + user.getNom());
-            localStorage.setItem('userData', JSON.stringify(user));
+            //var user = new user(this.jsonResult.id_acc,this.jsonResult.lastName_acc,this.jsonResult.firstName_acc,this.jsonResult.mail_acc/*,this.jsonResult.registrationDate_acc*/);
+            console.log(JSON.parse(this.data.response
+            ));
+            //console.log(user);
+            //console.log('Bienvenue ' + user.getPrenom() + ' ' + user.getNom());
+            //localStorage.setItem('userData', JSON.stringify(user));
           }
           else
           {
