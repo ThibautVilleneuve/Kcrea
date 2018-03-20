@@ -6,6 +6,7 @@ import { User } from '../../app/user';
 import { empty } from 'rxjs/Observer';
 
 import { IUser } from '../../app/interface/IUser';
+import { AccueilPage } from '../accueil/accueil';
 
 /**
  * Generated class for the LoginPage page.
@@ -27,6 +28,7 @@ export class LoginPage {
   private jsonResult;
   data:any = {};
   dataTest:JSON;
+  private user : User;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder : FormBuilder, public http:Http, private toastCtrl: ToastController) {
@@ -48,12 +50,19 @@ export class LoginPage {
           {
             //console.log(this.data.response);
             //var user = new User;
-            let utilisateur = Object.create(User.prototype);
-            Object.assign(utilisateur, JSON.parse(this.data['response']));
+            //let utilisateur = Object.create(User.prototype);
+            let utilisateur =  Object.assign(User.prototype, JSON.parse(this.data['response']));
+            this.user = utilisateur;
+            //var json = JSON.parse(this.data['response']);
             //console.log(JSON.parse(this.data['response']));
-            console.log(utilisateur);
-            console.log('Bienvenue ' + utilisateur.getPrenom() + ' ' + utilisateur.getNom());
-            localStorage.setItem('userData', JSON.stringify(utilisateur));
+            //console.log('Bienvenue ' + utilisateur. + ' ' + utilisateur.getNom());
+            if(localStorage.getItem('userData') == null)
+            {
+              localStorage.setItem('userData', JSON.stringify(utilisateur));
+            }
+            //console.log(localStorage.getItem('userData'));
+            //console.log(this.user.prenom_utilisateur)
+            this.navCtrl.setRoot(AccueilPage);
           }
           else
           {
@@ -65,6 +74,7 @@ export class LoginPage {
 
     //console.log(this.user.value);
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

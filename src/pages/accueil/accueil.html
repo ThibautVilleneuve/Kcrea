@@ -10,7 +10,7 @@
         <ion-icon name="menu"></ion-icon>
       </button>
       <ion-title>
-        Title
+        Accueil
       </ion-title>
       <ion-buttons end>
         <button ion-button (click)="doClick()">
@@ -26,10 +26,31 @@
       <ion-menu [content]="mycontent">
           <ion-content>
             <ion-list>
-              <p>Bienvenue </p>
-              <p>Accueil</p>
-              <p>Profil</p>
-              <p>Déconnexion</p>
+              <ion-item no-lines>
+                  <ion-avatar item-start>
+                    <img src="http://getbdtutor.com/upload/01952553811.jpg" style="height: 100px; width: 100px;">
+                  </ion-avatar>
+                  <h2>{{user.nom_utilisateur}}</h2>
+                  <p> {{user.prenom_utilisateur}}</p>
+                </ion-item>
+                <button menuClose ion-item (click)="openProfilePage()">
+                    <ion-icon name="contact"></ion-icon> Profil
+                </button>
+                <button menuClose ion-item (click)="openProfilePage()">
+                    <ion-icon name="cog"></ion-icon> Paramètres
+                </button>
+                <button menuClose ion-item (click)="logout()">
+                    <ion-icon name="log-out"></ion-icon> Déconnexion
+                </button>
+            <!--<ion-list>
+                
+              <button menuClose ion-item (click)="openProfilePage()">
+                Profile
+              </button>
+        
+              <ion-item>Profil</ion-item>
+              <ion-item>Déconnexion</ion-item> 
+            </ion-list>-->
             </ion-list>
           </ion-content>
         </ion-menu>

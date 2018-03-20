@@ -45,11 +45,11 @@ export class HomePage {
     }
 
     ionViewDidLoad() {
-        
-        if(localStorage.getItem('userData') != null)
+        console.log(localStorage.getItem('userData'));
+        /*if(localStorage.getItem('userData') != null)
         {
             this.navCtrl.setRoot(AccueilPage);
-        }
+        }*/
       }
 }
 
