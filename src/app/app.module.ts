@@ -9,7 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AuthProvider } from '../providers/auth/auth';
+import { AuthProvider } from '../pages/signup/providers/auth/auth';
 
 // Pages
 import { MyApp } from './app.component';

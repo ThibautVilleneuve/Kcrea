@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams, AlertController, LoadingController
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
 
-import { AuthProvider } from '../../providers/auth/auth';
+import { AuthProvider } from '../signup/providers/auth/auth';
 
 import * as firebase from 'firebase/app';
 

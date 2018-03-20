@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { AuthProvider } from '../../providers/auth/auth';
+import { AuthProvider } from './providers/auth/auth';
 import { ToastController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import * as firebase from 'firebase';

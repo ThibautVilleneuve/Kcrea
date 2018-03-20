@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, ViewController } from 'ionic-angular';
 
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { AuthProvider } from '../../providers/auth/auth';
+import { AuthProvider } from '../signup/providers/auth/auth';
 
 /**
  * Generated class for the LoginPage page.
@@ -52,7 +52,7 @@ export class LoginPage {
            // showing succesfull message
            this.createToast('Signed in with email: ' + this.signInForm.value.email).present();
            // closing dialog
-           //this.viewCtrl.dismiss();
+           this.viewCtrl.dismiss();
          },
 
          /**
